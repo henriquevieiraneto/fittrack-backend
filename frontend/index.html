@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitTrack - Registro de Atividades</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        
+        <div class="sidebar-profile">
+            <div class="user-info">
+                <div class="avatar-container">
+                    <img src="assets/avatar.jpg" alt="Foto de Perfil" class="profile-avatar">
+                    <span class="mood-icon">🏃‍♂️</span> 
+                </div>
+                <h2 class="username">Usuário_03</h2>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <span class="stat-value" id="qtd-atividades">2</span>
+                        <span class="stat-label">Qtd. Atividades</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value" id="qtd-calorias">650</span>
+                        <span class="stat-label">Qtd. Calorias (kCal)</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="active-tab-indicator">
+                <i class="fas fa-chart-bar"></i> Atividade
+            </div>
+
+            <nav class="main-nav">
+                <a href="#" class="nav-item active">Atividade</a>
+                <a href="#" class="nav-item">Metas</a>
+                <a href="#" class="nav-item">Comunidade</a>
+            </nav>
+
+            <div class="motivator-box">
+                <img src="assets/dog_motivator.jpg" alt="Pet Motivador" class="pet-motivator-img">
+                <p class="motivation-quote">"Não pare quando estiver cansado, pare quando terminar!"</p>
+            </div>
+        </div>
+
+        <div class="main-content">
+            
+            <div class="creation-block">
+                <div class="tab-header">
+                    <button class="activity-tab active" data-type="Corrida">Corrida</button>
+                    <button class="activity-tab" data-type="Caminhada">Caminhada</button>
+                    <button class="activity-tab" data-type="Ciclismo">Ciclismo</button>
+                </div>
+
+                <h3>Crie sua atividade</h3>
+                
+                <form id="create-activity-form">
+                    <input type="hidden" name="activity_type" id="activity-type-input" value="Corrida">
+
+                    <div class="form-row">
+                        <label for="distance">Distância (km)</label>
+                        <input type="number" id="distance" name="distance_km" placeholder="Ex: 5.0" step="0.1" required>
+                    </div>
+
+                    <div class="form-row">
+                        <label for="duration">Duração (min)</label>
+                        <input type="number" id="duration" name="duration_min" placeholder="Ex: 30" required>
+                    </div>
+
+                    <div class="form-row">
+                        <label for="effort">Esforço (1-5)</label>
+                        <input type="number" id="effort" name="perceived_effort" min="1" max="5" placeholder="3">
+                    </div>
+
+                    <div class="form-row">
+                        <label for="equipment">Equipamento</label>
+                        <input type="text" id="equipment" name="equipment_used" placeholder="Ex: Tênis A">
+                    </div>
+                    
+                    <button type="submit" class="submit-button">Registrar Atividade</button>
+                </form>
+            </div>
+
+            <div class="history-block">
+                <h3>Suas Atividades</h3>
+                <div id="activities-list" class="activities-list">
+                    <p class="loading-message">Carregando histórico...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

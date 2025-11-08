@@ -1,0 +1,236 @@
+/* frontend/css/styles.css */
+
+:root {
+    --primary-color: #3f51b5; 
+    --secondary-color: #ffffff;
+    --background-color: #f0f2f5; 
+    --card-background: #ffffff;
+    --text-color: #333;
+    --light-text: #666;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.app-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* --- COLUNA 1: PERFIL --- */
+.sidebar-profile {
+    width: 280px;
+    background-color: var(--secondary-color);
+    padding: 20px;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.user-info {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.avatar-container {
+    position: relative;
+    display: inline-block;
+}
+
+.profile-avatar {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--primary-color);
+}
+
+.mood-icon {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-size: 1.2em;
+}
+
+.username {
+    margin: 10px 0 20px 0;
+    font-size: 1.4em;
+}
+
+.stats-grid {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-value {
+    font-size: 1.4em;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.stat-label {
+    display: block;
+    font-size: 0.8em;
+    color: var(--light-text);
+}
+
+/* Navegação */
+.active-tab-indicator {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 15px 20px;
+    font-weight: bold;
+    margin: 10px 0;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+.active-tab-indicator i {
+    margin-right: 10px;
+}
+.main-nav a {
+    display: none; /* Mantemos o visual da imagem com o indicador principal */
+}
+
+/* Motivador */
+.motivator-box {
+    margin-top: 40px;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.pet-motivator-img {
+    width: 100%;
+    max-width: 150px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.motivation-quote {
+    font-style: italic;
+    font-size: 0.9em;
+    color: var(--light-text);
+}
+
+
+/* --- COLUNAS 2/3: CONTEÚDO PRINCIPAL --- */
+.main-content {
+    flex-grow: 1;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.creation-block, .history-block {
+    background-color: var(--card-background);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Criação de Atividade (Formulário) */
+.tab-header {
+    display: flex;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ddd;
+}
+
+.activity-tab {
+    background: none;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: color 0.2s;
+    border-bottom: 3px solid transparent;
+    margin-bottom: -2px; /* Ajuste para sobrepor a linha */
+}
+
+.activity-tab.active {
+    color: var(--primary-color);
+    border-bottom-color: var(--primary-color);
+}
+
+.form-row {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.form-row label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 0.9em;
+}
+
+.form-row input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+.submit-button {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+.submit-button:hover {
+    background-color: #303f9f;
+}
+
+/* Histórico de Atividades */
+.activity-card {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    margin-bottom: 15px;
+    background-color: #f9f9f9;
+    border-radius: 6px;
+    border-left: 5px solid var(--primary-color);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.activity-details {
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-between;
+}
+
+.detail-item {
+    text-align: center;
+    margin-right: 20px;
+}
+
+.detail-item p {
+    margin: 0;
+    font-size: 0.8em;
+    color: var(--light-text);
+}
+
+.detail-value {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: var(--text-color);
+    display: block;
+}
