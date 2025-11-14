@@ -1,0 +1,98 @@
+/* public/css/auth.css */
+
+:root {
+    --primary-color: #3f51b5; /* Azul Escuro */
+    --secondary-color: #ffffff;
+    --background-color: #f0f2f5; /* Fundo Cinza Claro */
+    --card-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    --border-color: #dddddd;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* --- Container Principal --- */
+.auth-container {
+    background-color: var(--secondary-color);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: var(--card-shadow);
+    width: 100%;
+    max-width: 400px; /* Largura Focada */
+    text-align: center;
+}
+
+.auth-container h2 {
+    color: var(--primary-color);
+    margin-bottom: 30px;
+    font-size: 1.8em;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 10px;
+}
+
+/* --- Formulário --- */
+.auth-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.auth-container input {
+    padding: 12px 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    font-size: 1em;
+    transition: border-color 0.2s;
+}
+
+.auth-container input:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 0 5px rgba(63, 81, 181, 0.3);
+}
+
+/* --- Botão de Ação --- */
+.auth-container button[type="submit"] {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: bold;
+    transition: background-color 0.2s, transform 0.1s;
+    margin-top: 10px;
+}
+
+.auth-container button[type="submit"]:hover {
+    background-color: #303f9f; /* Tom mais escuro */
+}
+
+.auth-container button[type="submit"]:active {
+    transform: translateY(1px);
+}
+
+/* --- Links de Navegação --- */
+.auth-container p {
+    margin-top: 25px;
+    font-size: 0.9em;
+    color: #666;
+}
+
+.auth-container a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.auth-container a:hover {
+    text-decoration: underline;
+}
